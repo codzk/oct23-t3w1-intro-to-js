@@ -1,3 +1,5 @@
+function exampleStuff() {
+    
 let exampleEmptyVariable = null;
 let anotherEmptyVariable = undefined;
 
@@ -110,6 +112,15 @@ zeke.hobbies[1]["favouriteGames"][0] = "palworld";
 
 console.log(zeke);
 
+
+
+/**
+ * Description placeholder
+ * @date 07/04/2024 - 19:27:08
+ *
+ * @type {string}
+ */
+
 let weather = "rainy";
 
 switch (weather) {
@@ -143,4 +154,82 @@ if (weather == "sunny") {
     console.log("crazy weather, am I right?");
 }
     
+
+
+
+}
+
+let pokemonTeam = [
+    "pikachu",
+    "squirtle",
+    "charmander",
+    "mew",
+];
+
+function logTheTeam () {
+    sortedTeam = pokemonTeam.sort();
+
+    // sortedTeam.forEach((pokemon, arrayIndex) => {
+    //     console.log(pokemon + " is at index of " + arrayIndex);
+    // });
+
+    // console.log(pokemonTeam.entries());
+
+    // for (const [index, pokemon] of sortedTeam.entries()) {
+    //     console.log(`${pokemon} is at index of ${index}`);
+        
+    // }
+
+    let [firstPokemon, ...otherPokemon] = sortedTeam;
+
+    console.log(firstPokemon);
+    console.log(otherPokemon);
+
+    // while (true){
+    //     console.log("infinite loop");
+    // }
+
+    // while (sortedTeam.length){
+    //     console.log(sortedTeam.pop());
+    // }
+
+    do {
+        console.log(sortedTeam.pop());
+    } while (sortedTeam.length);
+
+    sortedTeam.push('blastoise');
+
+    for (let index = 0; index < sortedTeam.length; index++) {
+        console.log("Pokemon at index " + index + " is " + sortedTeam[index]);
+       
+        
+    }
+
+
+    // for (const pokemon of sortedTeam) {
+    //     console.log(pokemon);
+        
+    // }
+}
+
+
+// logTheTeam();
+
+const logTheTeamAlternate = (targetSize = 4) => {
+    // double equals is checking for value
+    // type coercion happens where possible automatically
+    if (pokemonTeam.length == targetSize){
+        console.log("there are " + targetSize + " pokemon in the team");
+    }
+
+    // triple equals is checking for value AND data type
+    if (pokemonTeam.length === targetSize){
+        console.log("there are " + targetSize + " pokemon in the team, this is from the strict equals comparison");
+
+    }
+    
+}
+
+logTheTeamAlternate();
+logTheTeamAlternate(2);
 

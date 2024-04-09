@@ -31,7 +31,7 @@ let exampleJson = {
 /* 
 
 1. JSON.parse to convert a JSON string into an object
-2. Modify the object however you want
+2. Modify the object however you want.
 3. Save the JSON as a JSON string by stringifying it
 
 
